@@ -1,9 +1,7 @@
 def get_input
-  file = File.open("./lib/input.txt")
-  file.read
+  input_array = IO.readlines("./lib/input.txt")
 end
 
 def get_room_dimensions
-  file = File.open("./lib/input.txt", &:readline)
-  file[0...-1]
+  "5 5"
 end

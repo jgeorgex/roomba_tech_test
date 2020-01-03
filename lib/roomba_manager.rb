@@ -3,5 +3,6 @@ def get_input
 end
 
 def get_room_dimensions
-  "5 5"
+  room_dimensions = get_input[0].chop.split(" ").map(&:to_i)
 end
+

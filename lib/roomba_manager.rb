@@ -10,3 +10,7 @@ def get_room_dimension_x
   get_room_dimensions[0]
 end
 
+def get_room_dimension_y
+  get_room_dimensions[1]
+end
+

@@ -14,3 +14,6 @@ def get_room_dimension_y
   get_room_dimensions[1]
 end
 
+def get_start_position
+  start_position = get_input[1].chop.split(" ").map(&:to_i)
+end

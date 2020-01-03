@@ -24,3 +24,9 @@ describe '#get_room_dimension_y' do
     end
 end
 
+describe '#get_start_position' do
+    it 'gets [1,2] from the input text file' do
+        expect(get_start_position).to eq([1,2])
+    end
+end
+

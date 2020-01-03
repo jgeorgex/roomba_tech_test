@@ -21,3 +21,11 @@ end
 def get_driving_instructions
   driving_instructions = ["NNESEESWNWW"]
 end
+
+def get_dirt_patches
+  room_dimensions = []
+  room_dimensions << get_input[2].chop.split(" ").map(&:to_i)
+  room_dimensions << get_input[3].chop.split(" ").map(&:to_i)
+  room_dimensions << get_input[4].chop.split(" ").map(&:to_i)
+  return room_dimensions
+end

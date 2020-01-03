@@ -6,3 +6,7 @@ def get_room_dimensions
   room_dimensions = get_input[0].chop.split(" ").map(&:to_i)
 end
 
+def get_room_dimension_x
+  get_room_dimensions[0]
+end
+

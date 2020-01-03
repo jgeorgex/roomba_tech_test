@@ -12,4 +12,10 @@ describe '#get_room_dimensions' do
     end
 end
 
+describe '#get_room_dimension_x' do
+    it 'gets 5 from the input text file' do
+        expect(get_room_dimension_x).to eq(5)
+    end
+end
+
 

@@ -23,9 +23,9 @@ def get_driving_instructions
 end
 
 def get_dirt_patches
-  room_dimensions = []
-  room_dimensions << get_input[2].chop.split(" ").map(&:to_i)
-  room_dimensions << get_input[3].chop.split(" ").map(&:to_i)
-  room_dimensions << get_input[4].chop.split(" ").map(&:to_i)
-  return room_dimensions
+  dirt_patches = []
+  dirt_patches << get_input[2].chop.split(" ").map(&:to_i)
+  dirt_patches << get_input[3].chop.split(" ").map(&:to_i)
+  dirt_patches << get_input[4].chop.split(" ").map(&:to_i)
+  return dirt_patches
 end

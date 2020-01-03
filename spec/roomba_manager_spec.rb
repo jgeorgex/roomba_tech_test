@@ -37,7 +37,7 @@ describe '#get_driving_instructions' do
 end
 
 describe '#get_dirt_patches' do 
-    it 'gets [1,0],[2,2],[2,3]' do
+    it 'gets [1,0],[2,2],[2,3] from the input file' do
         expect(get_dirt_patches).to eq([[1,0],[2,2],[2,3]])
     end
 end

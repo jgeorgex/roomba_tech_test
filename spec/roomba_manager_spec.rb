@@ -30,3 +30,9 @@ describe '#get_start_position' do
     end
 end
 
+describe '#get_driving_instructions' do
+    it 'gets NNESEESWNWW from the input file' do
+        expect(get_driving_instructions).to eq(["NNESEESWNWW"])
+    end
+end
+

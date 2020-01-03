@@ -17,3 +17,7 @@ end
 def get_start_position
   start_position = get_input[1].chop.split(" ").map(&:to_i)
 end
+
+def get_driving_instructions
+  driving_instructions = ["NNESEESWNWW"]
+end

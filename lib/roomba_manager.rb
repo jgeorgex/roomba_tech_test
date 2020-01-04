@@ -24,8 +24,11 @@ end
 
 def get_dirt_patches
   dirt_patches = []
-  dirt_patches << get_input[2].chop.split(" ").map(&:to_i)
-  dirt_patches << get_input[3].chop.split(" ").map(&:to_i)
-  dirt_patches << get_input[4].chop.split(" ").map(&:to_i)
+  dirt_patches_counter = 2
+  dirt_patches_total = get_input.length-3
+  while dirt_patches_counter <= 4 do
+  dirt_patches << get_input[dirt_patches_counter].chop.split(" ").map(&:to_i)
+  dirt_patches_counter+=1
+  end
   return dirt_patches
 end

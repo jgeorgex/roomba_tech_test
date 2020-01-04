@@ -1,3 +1,5 @@
+class RoombaManager
+
 def get_input
   input_array = IO.readlines("./lib/input.txt")
 end
@@ -31,4 +33,5 @@ def get_dirt_patches
   dirt_patches_counter+=1
   end
   return dirt_patches
+end
 end

@@ -19,7 +19,7 @@ def get_start_position
 end
 
 def get_driving_instructions
-  driving_instructions = ["NNESEESWNWW"]
+  driving_instructions = get_input[get_input.length-1]
 end
 
 def get_dirt_patches

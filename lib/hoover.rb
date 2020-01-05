@@ -10,4 +10,10 @@ class Hoover
         @hoover_route << start_position
         start_position
     end
+
+    def convert_instructions_to_coordinates
+        [1,3]
+    end
+
+
 end

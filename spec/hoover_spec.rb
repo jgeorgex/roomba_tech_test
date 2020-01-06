@@ -15,6 +15,13 @@ describe Hoover do
         end
     end    
 
+    describe '#get_current_position' do
+        it 'gets current position of hoover' do
+            hoover = Hoover.new
+            expect(hoover.get_current_position).to eq([1,2])
+        end
+    end
+
     describe '#convert_instructions_to_coordinates' do
         it 'Converts driving instructions to route coordinates' do
             hoover = Hoover.new

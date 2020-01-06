@@ -6,7 +6,13 @@ class Hoover
     end
 
     def run_hoover
+        get_start_coordinates
         [[1,2],[1,3],[1,4],[2,4],[2,3],[3,3],[4,3],[4,2],[3,2],[3,3],[2,3],[1,3]]
+    end
+
+    def get_current_position
+        run_hoover
+        @hoover_route.last
     end
 
     def get_start_coordinates

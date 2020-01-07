@@ -36,6 +36,13 @@ describe Hoover do
         end
     end
 
+    describe 'get_total_moves' do
+        it 'calculates total number of positions hoover will have' do
+            hoover = Hoover.new
+            expect(hoover.get_total_moves).to eq(12)
+        end
+    end
+
     describe '#convert_instructions_to_coordinates' do
         it 'Converts driving instructions to route coordinates' do
             hoover = Hoover.new

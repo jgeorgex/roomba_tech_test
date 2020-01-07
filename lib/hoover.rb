@@ -34,9 +34,16 @@ class Hoover
     end
 
     def get_move
-        "N"
+        move = RoombaManager.new.get_driving_instructions
+        position =  @hoover_route.length
+        move[position]
     end
 
+    def get_total_moves
+        total_moves = RoombaManager.new.get_driving_instructions
+        total_moves = total_moves.length+1
+        return total_moves
+    end
 
 
     def convert_instructions_to_coordinates

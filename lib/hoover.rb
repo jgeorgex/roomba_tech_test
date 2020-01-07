@@ -7,7 +7,16 @@ class Hoover
 
     def run_hoover
         get_start_coordinates
-        [[1,2],[1,3],[1,4],[2,4],[2,3],[3,3],[4,3],[4,2],[3,2],[3,3],[2,3],[1,3]]
+        position_counter = 0
+        total_moves = get_total_moves
+        while position_counter <= total_moves do
+        position_counter = position_counter+1
+       
+
+        
+        end
+        @hoover_route
+        # [[1,2],[1,3],[1,4],[2,4],[2,3],[3,3],[4,3],[4,2],[3,2],[3,3],[2,3],[1,3]]
     end
 
     def get_start_coordinates
@@ -27,10 +36,17 @@ class Hoover
         current_position_y = current_position[1]
         move = get_move
         next_position = Array.new
-        if move = "N"
+        if move == "N"
             next_position = next_position.insert(0,current_position_x,current_position_y+1)
+        elsif move == "E"
+            next_position = next_position.insert(0,current_position_x+1,current_position_y)
+        elsif move == "S"
+            next_position = next_position.insert(0,current_position_x,current_position_y-1)
+        elsif move == "W"
+            next_position = next_position.insert(0,current_position_x-1,current_position_y)
         end
-        next_position
+   
+        return next_position
     end
 
     def get_move
@@ -43,31 +59,6 @@ class Hoover
         total_moves = RoombaManager.new.get_driving_instructions
         total_moves = total_moves.length+1
         return total_moves
-    end
-
-
-    def convert_instructions_to_coordinates
-        instructions = RoombaManager.new.get_driving_instructions
-        get_start_coordinates
-        current_location = @hoover_route
-        new_location = Array.new
-        instructions_location = 0
-        current_location_x = current_location[0][0]
-        current_location_y = current_location[0][1]
-
-            if instructions[instructions_location] == "N"
-                new_location.insert(0,current_location_x,current_location_y+1)
-            elsif instructions[instructions_location] == "E"
-                new_location.insert(0,current_location_x+1,current_location_y)
-            elsif instructions[instructions_location] == "S"
-                new_location.insert(0,current_location_x,current_location_y-1)
-            elsif instructions[instructions_location] == "W"
-                new_location.insert(0,current_location_x-1,current_location_y)
-            end
-        
-        @hoover_route << new_location
-        new_location
-        
     end
 
 end

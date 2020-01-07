@@ -9,7 +9,7 @@ describe Hoover do
     end
 
     describe '#run_hoover' do
-        it 'returns the coordinates of teh hoovers route' do
+        it 'returns the coordinates of the hoovers route' do
             hoover = Hoover.new
             expect(hoover.run_hoover).to eq([[1,2],[1,3],[1,4],[2,4],[2,3],[3,3],[4,3],[4,2],[3,2],[3,3],[2,3],[1,3]])
         end

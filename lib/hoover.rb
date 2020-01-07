@@ -45,7 +45,6 @@ class Hoover
         elsif move == "W"
             next_position = next_position.insert(0,current_position_x-1,current_position_y)
         end
-   
         return next_position
     end
 

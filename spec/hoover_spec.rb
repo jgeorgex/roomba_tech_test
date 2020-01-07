@@ -15,12 +15,12 @@ describe Hoover do
         end
     end    
 
-    describe '#get_current_position' do
-        it 'gets current position of hoover' do
-            hoover = Hoover.new
-            expect(hoover.get_current_position).to eq([1,2])
-        end
-    end
+    # describe '#get_current_position' do
+    #     it 'gets current position of hoover' do
+    #         hoover = Hoover.new
+    #         expect(hoover.get_current_position).to eq([1,2])
+    #     end
+    # end
 
     describe '#get_next_position' do
         it 'gets next position of hoover and adds it to hoover_route' do

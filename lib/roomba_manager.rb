@@ -17,7 +17,8 @@ def get_room_dimension_y
 end
 
 def get_start_position
-  @start_position = get_input[1].chop.split(" ").map(&:to_i)
+  start_position = get_input[1].chop.split(" ").map(&:to_i)
+
 end
 
 def get_driving_instructions

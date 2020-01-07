@@ -22,6 +22,20 @@ describe Hoover do
         end
     end
 
+    describe '#get_next_position' do
+        it 'gets next position of hoover and adds it to hoover_route' do
+        hoover = Hoover.new
+        expect(hoover.get_next_position).to eq([1,3])
+        end
+    end    
+
+    describe 'get_move' do
+        it 'gets the next move for the hoover' do
+        hoover = Hoover.new
+        expect(hoover.get_move).to eq("N")
+        end
+    end
+
     describe '#convert_instructions_to_coordinates' do
         it 'Converts driving instructions to route coordinates' do
             hoover = Hoover.new

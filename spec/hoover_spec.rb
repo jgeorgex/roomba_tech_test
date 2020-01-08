@@ -16,4 +16,11 @@ describe Hoover do
         end
     end
 
+    describe '#calculate_route' do
+        it 'calculates route of hoover' do
+        hoover = Hoover.new
+        expect(hoover.calculate_route).to eq([[0,0],[1,0],[0,0]])
+        end
+    end
+
 end

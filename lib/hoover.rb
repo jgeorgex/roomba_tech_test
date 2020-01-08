@@ -8,4 +8,9 @@ def get_final_position
     [0,0]
 end
 
+def calculate_route
+    [[0,0],[1,0],[0,0]]
+end
+
+
 end

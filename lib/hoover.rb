@@ -1,14 +1,19 @@
 class Hoover
 
     def run_hoover
-        "The final poition is #{get_final_position} and 1 piece of dirt was cleaned up"
+        print get_final_position[0]," ",get_final_position[1]
+        return get_final_position[0]," ",get_final_position[1]
     end
 
     def get_final_position
-        calculate_route.last.to_s
+        calculate_route.last
     end
 
     def calculate_route
+        route = []
+        roomba_manager = RoombaManager.new
+        route << roomba_manager.get_start_position
+        route
         [[0,0],[1,0],[0,0]]
     end
 

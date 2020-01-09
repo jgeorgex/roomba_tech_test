@@ -12,7 +12,7 @@ describe Hoover do
     describe '#get_final_position' do
         it 'gets the final position of the hoover' do
             hoover = Hoover.new
-            expect(hoover.get_final_position).to eq([0, 0])
+            expect(hoover.get_final_position).to eq("0 0")
         end
     end
 

@@ -7,7 +7,8 @@ class Hoover
     end
 
     def get_final_position
-        calculate_route.last
+        final_position_array = calculate_route.last
+        final_position_string = "#{final_position_array[0]} #{final_position_array[1]}"
     end
 
     def calculate_route

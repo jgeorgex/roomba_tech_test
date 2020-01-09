@@ -1,7 +1,7 @@
 class Hoover
 
     def run_hoover
-        puts "0 0"
+        puts get_final_position
         puts "1"
         "0 0"
     end

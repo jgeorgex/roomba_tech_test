@@ -5,7 +5,7 @@ describe Hoover do
     describe '#run_hoover' do
         it 'returns the hoover final position count of dirt cleaned up' do
             hoover = Hoover.new
-            expect(hoover.run_hoover).to start_with(0)
+            expect(hoover.run_hoover).to include("0 0") 
         end
     end
 

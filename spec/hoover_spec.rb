@@ -12,15 +12,31 @@ describe Hoover do
     describe '#get_final_position' do
         it 'gets the final position of the hoover' do
             hoover = Hoover.new
+            hoover.run_hoover
             expect(hoover.get_final_position).to eq("0 0")
+        end
+    end
+
+    describe '#get_start_position' do
+        it 'gets the start position of the hoover' do   
+            hoover = Hoover.new
+            expect(hoover.get_start_position).to eq([0,0])
         end
     end
 
     describe '#calculate_route' do
         it 'calculates route of hoover' do
-        hoover = Hoover.new
-        expect(hoover.calculate_route).to eq([[0,0],[1,0],[0,0]])
+            hoover = Hoover.new
+            expect(hoover.calculate_route).to eq([[0,0],[1,0],[0,0]])
         end
     end
+
+    describe '#get_directions' do
+        it 'gets the directions the hoover will follow' do
+            hoover = Hoover.new
+            expect(hoover.get_directions).to eq("EW")
+        end
+    end
+
 
 end

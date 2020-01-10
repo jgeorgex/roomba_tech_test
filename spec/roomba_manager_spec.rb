@@ -5,7 +5,7 @@ describe RoombaManager do
 describe '#get_input' do
     it 'gets the input of the text file' do
         roomba_manager = RoombaManager.new
-        expect(roomba_manager.get_input).to include('EW')
+        expect(roomba_manager.get_input).to include('NNESEESWNWW')
     end
 end
 
@@ -19,14 +19,14 @@ end
 describe '#get_start_position' do
     it 'gets [0,0] from the input text file' do
         roomba_manager = RoombaManager.new
-        expect(roomba_manager.get_start_position).to eq([0,0])
+        expect(roomba_manager.get_start_position).to eq([1,2])
     end
 end
 
 describe '#get_driving_instructions' do
     it 'gets EW from the input file' do
         roomba_manager = RoombaManager.new
-        expect(roomba_manager.get_driving_instructions).to eq("EW")
+        expect(roomba_manager.get_driving_instructions).to eq("NNESEESWNWW")
     end
 end
 

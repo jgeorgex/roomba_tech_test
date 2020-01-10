@@ -6,9 +6,9 @@ class Hoover
     
     def run_hoover
         calculate_route
-        puts get_final_position
-        puts "1"
-        "0 0"
+        puts { get_final_position }
+        puts { "1" }
+        "----"
     end
 
     def get_final_position
@@ -29,12 +29,12 @@ class Hoover
 
     def calculate_route
         get_start_position
-        current_coordinates = route.last
         directions = get_directions
         directions_total = directions.length+1
         position = 0
-            while position < 2
+            while position < directions_total
                 next_direction = get_directions[position]
+                current_coordinates = route.last
                      if next_direction == "E"
                         x = current_coordinates[0]+1
                         y = current_coordinates[1]
@@ -44,7 +44,28 @@ class Hoover
                         @hoover_route << new_coordinates
                         position += 1
                     elsif next_direction == "W"
-                        @hoover_route << [0,0]
+                        x = current_coordinates[0]-1
+                        y = current_coordinates[1]
+                        new_coordinates = Array.new
+                        new_coordinates.insert(0, x)
+                        new_coordinates.insert(1, y)
+                        @hoover_route << new_coordinates
+                        position += 1
+                    elsif next_direction == "N"
+                        x = current_coordinates[0]
+                        y = current_coordinates[1]+1
+                        new_coordinates = Array.new
+                        new_coordinates.insert(0, x)
+                        new_coordinates.insert(1, y)
+                        @hoover_route << new_coordinates
+                        position += 1
+                    elsif next_direction == "S"
+                        x = current_coordinates[0]
+                        y = current_coordinates[1]-1
+                        new_coordinates = Array.new
+                        new_coordinates.insert(0, x)
+                        new_coordinates.insert(1, y)
+                        @hoover_route << new_coordinates
                         position += 1
                     else
                         break

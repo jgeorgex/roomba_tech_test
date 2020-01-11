@@ -6,8 +6,8 @@ class Hoover
     
     def run_hoover
         calculate_route
-        puts { get_final_position }
-        puts { "1" }
+        puts get_final_position
+        puts "1"
         "----"
     end
 

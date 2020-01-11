@@ -7,7 +7,7 @@ class Hoover
     def run_hoover
         calculate_route
         puts get_final_position
-        puts "1"
+        puts count_patches_cleaned
         "----"
     end
 
@@ -77,6 +77,10 @@ class Hoover
     def get_directions
         roomba_manager = RoombaManager.new
         roomba_manager.get_driving_instructions
+    end
+
+    def count_patches_cleaned
+        "1"
     end
 
 end

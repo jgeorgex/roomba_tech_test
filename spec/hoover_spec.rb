@@ -38,5 +38,12 @@ describe Hoover do
         end
     end
 
+    describe '#count_patches_cleaned' do
+        it 'counts the number of dirt patches cleaned' do
+            hoover = Hoover.new
+            expect(hoover.count_patches_cleaned).to eq("1")
+        end
+    end
+
 
 end

@@ -8,7 +8,7 @@ class Hoover
         calculate_route
         puts get_final_position
         puts count_patches_cleaned
-        "----"
+        "Thanks for using the robot hoover"
     end
 
     def get_final_position

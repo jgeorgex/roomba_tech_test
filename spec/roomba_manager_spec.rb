@@ -31,9 +31,9 @@ describe '#get_driving_instructions' do
 end
 
 describe '#get_dirt_patches' do 
-    it 'gets [1,0] from the input file' do
+    it 'gets [[1,0],[2,2],[2,3]] from the input file' do
         roomba_manager = RoombaManager.new
-        expect(roomba_manager.get_dirt_patches).to eq([1,0])
+        expect(roomba_manager.get_dirt_patches).to eq([[1,0],[2,2],[2,3]])
     end
 end
 end

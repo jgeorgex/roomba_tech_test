@@ -1,5 +1,9 @@
 class RoombaManager
 
+def initialize
+@dirt_patches = []
+end
+
 def get_input
   input_array = IO.readlines("./lib/input.txt")
 end
@@ -18,7 +22,13 @@ def get_driving_instructions
 end
 
 def get_dirt_patches
-  dirt_patches = get_input[2].chop.split(" ").map(&:to_i)
-  return dirt_patches
+  total_patches = get_input.length-3
+  patch_count = 0
+    while patch_count < total_patches 
+      patch_position = patch_count+2
+      @dirt_patches << get_input[patch_position].chop.split(" ").map(&:to_i)
+      patch_count += 1
+    end
+  return @dirt_patches
 end
 end

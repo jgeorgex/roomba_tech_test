@@ -49,7 +49,7 @@ describe Hoover do
         it 'gets the dirt patches from roomba_manager' do
             hoover = Hoover.new
             hoover.run_hoover
-            expect(hoover.get_dirt_patches).to eq([1,0])
+            expect(hoover.get_dirt_patches).to eq([[1,0],[2,2],[2,3]])
         end
     end    
 

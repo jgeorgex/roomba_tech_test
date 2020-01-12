@@ -60,3 +60,23 @@ Example (matching the input above):
 1<br>
 
 ## Instructions
+
+Instalation and testing
+
+1.  Clone this repository.
+2.  From the command line go in to the main program directory (robot_hoover)
+3.  To run the prgrams tests from within the main program directory \$rspec
+
+To run the program from the terminal
+
+1.  \$ irb <br>
+2.  \$ require './lib/roomba_manager.rb' (This should return true) <br>
+3.  \$ require './lib/hoover.rb' (This shopuld return true) <br>
+4.  \$ hoover = Hoover.new (This creates a new hoover called 'hoover') <br>
+5.  \$ hoover.run_hoover (This runs the program and returns the required output. Line 1 is the final position of the hoover. Line 2 is the number of dirt patches the hoover cleaned up.)
+
+## To Do
+
+1.  Edge cases.
+2.  Refactoring.
+3.  Use doubles / stubbing for tests.

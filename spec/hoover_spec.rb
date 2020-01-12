@@ -41,9 +41,16 @@ describe Hoover do
     describe '#count_patches_cleaned' do
         it 'counts the number of dirt patches cleaned' do
             hoover = Hoover.new
-            expect(hoover.count_patches_cleaned).to eq("1")
+            expect(hoover.count_patches_cleaned).to eq("0")
         end
     end
 
+    describe '#get_dirt_patches' do
+        it 'gets the dirt patches from roomba_manager' do
+            hoover = Hoover.new
+            hoover.run_hoover
+            expect(hoover.get_dirt_patches).to eq([1,0])
+        end
+    end    
 
 end

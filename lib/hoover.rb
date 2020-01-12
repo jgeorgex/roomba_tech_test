@@ -80,7 +80,17 @@ class Hoover
     end
 
     def count_patches_cleaned
-        "1"
+        dirt_coordinates = get_dirt_patches
+        hoover_coordinates = route
+        dirt_coordinates
+        hoover_coordinates
+        intersection = dirt_coordinates & hoover_coordinates
+        intersection.count.to_s
+    end
+
+    def get_dirt_patches
+        roomba_manager = RoombaManager.new
+        roomba_manager.get_dirt_patches
     end
 
 end

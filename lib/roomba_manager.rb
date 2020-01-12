@@ -5,7 +5,7 @@ def initialize
 end
 
 def get_input
-  input_array = IO.readlines("./lib/input.txt")
+  input_array = IO.readlines("../roomba_tech_test/input.txt")
 end
 
 def get_room_dimensions

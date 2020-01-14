@@ -29,8 +29,7 @@ class Hoover
 
     def calculate_route
         get_start_position
-        directions = get_directions
-        directions_total = directions.length+1
+        directions_total = get_directions.length+1
         position = 0
             while position < directions_total
                 next_direction = get_directions[position]

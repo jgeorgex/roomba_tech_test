@@ -20,10 +20,7 @@ class Hoover
     end
 
     def get_start_position
-        roomba_manager = roomba
-        roomba_manager = roomba_manager.get_start_position
-        @hoover_route << roomba_manager
-        roomba_manager
+        @hoover_route << roomba.get_start_position
     end
 
     def route

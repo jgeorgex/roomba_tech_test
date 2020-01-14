@@ -20,7 +20,7 @@ describe Hoover do
     describe '#get_start_position' do
         it 'gets the start position of the hoover' do   
             hoover = Hoover.new
-            expect(hoover.get_start_position).to eq([1,2])
+            expect(hoover.get_start_position).to eq([[1,2]])
         end
     end
 

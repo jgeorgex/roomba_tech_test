@@ -79,11 +79,7 @@ class Hoover
     end
 
     def count_patches_cleaned
-        dirt_coordinates = get_dirt_patches
-        hoover_coordinates = route
-        dirt_coordinates
-        hoover_coordinates
-        intersection = dirt_coordinates & hoover_coordinates
+        intersection = get_dirt_patches & route
         intersection.count.to_s
     end
 

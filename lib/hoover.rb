@@ -1,6 +1,9 @@
 class Hoover
     
-    def initialize
+    attr_reader :roomba
+
+    def initialize(roomba = RoombaManager.new)
+        @roomba = roomba
         @hoover_route = []
     end
     
@@ -17,7 +20,7 @@ class Hoover
     end
 
     def get_start_position
-        roomba_manager = RoombaManager.new
+        roomba_manager = roomba
         roomba_manager = roomba_manager.get_start_position
         @hoover_route << roomba_manager
         roomba_manager
@@ -75,7 +78,7 @@ class Hoover
     end
 
     def get_directions
-        roomba_manager = RoombaManager.new
+        roomba_manager = roomba
         roomba_manager.get_driving_instructions
     end
 

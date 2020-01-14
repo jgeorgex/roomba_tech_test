@@ -29,6 +29,6 @@ def get_dirt_patches
       @dirt_patches << get_input[patch_position].chop.split(" ").map(&:to_i)
       patch_count += 1
     end
-  return @dirt_patches
-end
+  return @dirt_patches 
+  end
 end

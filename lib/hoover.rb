@@ -75,8 +75,7 @@ class Hoover
     end
 
     def get_directions
-        roomba_manager = roomba
-        roomba_manager.get_driving_instructions
+        roomba.get_driving_instructions
     end
 
     def count_patches_cleaned

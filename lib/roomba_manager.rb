@@ -21,10 +21,13 @@ def get_driving_instructions
   driving_instructions = get_input[get_input.length-1]
 end
 
+def dirt_patch_count
+  get_input.length-3
+end
+
 def get_dirt_patches
-  total_patches = get_input.length-3
   patch_count = 0
-    while patch_count < total_patches 
+    while patch_count < dirt_patch_count 
       patch_position = patch_count+2
       @dirt_patches << get_input[patch_position].chop.split(" ").map(&:to_i)
       patch_count += 1

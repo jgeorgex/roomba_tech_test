@@ -30,6 +30,13 @@ describe '#get_driving_instructions' do
     end
 end
 
+describe '#dirt_patch_count' do
+    it '#calculates how many dirt patches there are' do
+        roomba_manager = RoombaManager.new
+        expect(roomba_manager.dirt_patch_count).to eq(3)
+    end
+end
+
 describe '#get_dirt_patches' do 
     it 'gets [[1,0],[2,2],[2,3]] from the input file' do
         roomba_manager = RoombaManager.new

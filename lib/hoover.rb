@@ -38,32 +38,28 @@ class Hoover
                         x = current_coordinates[0]+1
                         y = current_coordinates[1]
                         new_coordinates = Array.new
-                        new_coordinates.insert(0, x)
-                        new_coordinates.insert(1, y)
+                        new_coordinates.insert(0, x).insert(1, y)
                         @hoover_route << new_coordinates
                         position += 1
                     elsif next_direction == "W"
                         x = current_coordinates[0]-1
                         y = current_coordinates[1]
                         new_coordinates = Array.new
-                        new_coordinates.insert(0, x)
-                        new_coordinates.insert(1, y)
+                        new_coordinates.insert(0, x).insert(1, y)
                         @hoover_route << new_coordinates
                         position += 1
                     elsif next_direction == "N"
                         x = current_coordinates[0]
                         y = current_coordinates[1]+1
                         new_coordinates = Array.new
-                        new_coordinates.insert(0, x)
-                        new_coordinates.insert(1, y)
+                        new_coordinates.insert(0, x).insert(1, y)
                         @hoover_route << new_coordinates
                         position += 1
                     elsif next_direction == "S"
                         x = current_coordinates[0]
                         y = current_coordinates[1]-1
                         new_coordinates = Array.new
-                        new_coordinates.insert(0, x)
-                        new_coordinates.insert(1, y)
+                        new_coordinates.insert(0, x).insert(1, y)
                         @hoover_route << new_coordinates
                         position += 1
                     else

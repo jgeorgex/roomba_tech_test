@@ -2,12 +2,13 @@ require 'hoover'
 
 describe Hoover do
 
-    describe '#run_hoover' do
-        it 'returns the hoover final position count of dirt cleaned up' do
-            hoover = Hoover.new
-            expect(hoover.run_hoover).to include('Thanks for using the robot hoover') 
+    describe "#get_final_position" do
+        it "gets the final position of the hoover" do
+            expect do
+                Hoover.new.run_hoover 
+            end.to output("1 3\n1\n").to_stdout
         end
-    end
+    end    
 
     describe '#get_final_position' do
         it 'gets the final position of the hoover' do

@@ -80,3 +80,9 @@ To run the program from the terminal
 1.  Edge cases.
 2.  Refactoring.
 3.  Use doubles / stubbing for tests.
+
+## User Stories
+
+As a user <br>
+So I can see where my hoover is and what it has done <br>
+I want to see an output of final position and number of dirt patches cleaned <br>

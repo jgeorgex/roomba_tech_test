@@ -10,14 +10,6 @@ describe Hoover do
         end
     end    
 
-    describe '#get_final_position' do
-        it 'gets the final position of the hoover' do
-            hoover = Hoover.new
-            hoover.run_hoover
-            expect(hoover.get_final_position).to eq("1 3")
-        end
-    end
-
     describe '#get_start_position' do
         it 'gets the start position of the hoover' do   
             hoover = Hoover.new

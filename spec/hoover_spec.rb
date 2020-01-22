@@ -44,6 +44,13 @@ describe Hoover do
             hoover.run_hoover
             expect(hoover.get_dirt_patches).to eq([[1,0],[2,2],[2,3]])
         end
+    end
+    
+    describe '#get_room_dimensions' do
+        it 'gets teh dimensions of the room' do
+            hoover = Hoover.new
+            expect(hoover.get_room_dimensions).to eq([5,5])
+        end
     end    
 
 end

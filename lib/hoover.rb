@@ -69,6 +69,10 @@ class Hoover
         return @hoover_route    
     end
 
+    def get_room_dimensions
+        roomba.get_room_dimensions
+    end
+
     def get_directions
         roomba.get_driving_instructions
     end

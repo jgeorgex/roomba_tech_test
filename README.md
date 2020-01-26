@@ -75,12 +75,6 @@ To run the program from the terminal
 4.  \$ hoover = Hoover.new (This creates a new hoover called 'hoover') <br>
 5.  \$ hoover.run_hoover (This runs the program and returns the required output. Line 1 is the final position of the hoover. Line 2 is the number of dirt patches the hoover cleaned up.)
 
-## To Do
-
-1.  Edge cases.
-2.  Refactoring.
-3.  Use doubles / stubbing for tests.
-
 ## User Stories
 
 As a user <br>

@@ -71,7 +71,7 @@ To run the program from the terminal
 
 1.  \$ irb <br>
 2.  \$ require './lib/roomba_manager.rb' (This should return true) <br>
-3.  \$ require './lib/hoover.rb' (This shopuld return true) <br>
+3.  \$ require './lib/hoover.rb' (This should return true) <br>
 4.  \$ hoover = Hoover.new (This creates a new hoover called 'hoover') <br>
 5.  \$ hoover.run_hoover (This runs the program and returns the required output. Line 1 is the final position of the hoover. Line 2 is the number of dirt patches the hoover cleaned up.)
 

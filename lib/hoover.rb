@@ -39,6 +39,7 @@ class Hoover
                         y = current_coordinates[1]
                         new_coordinates = Array.new
                         new_coordinates.insert(0, x).insert(1, y)
+                        new_coordinates = check_valid_move(new_coordinates)
                         @hoover_route << new_coordinates
                         position += 1
                     elsif next_direction == "W"
@@ -46,6 +47,7 @@ class Hoover
                         y = current_coordinates[1]
                         new_coordinates = Array.new
                         new_coordinates.insert(0, x).insert(1, y)
+                        new_coordinates = check_valid_move(new_coordinates)
                         @hoover_route << new_coordinates
                         position += 1
                     elsif next_direction == "N"
@@ -53,6 +55,7 @@ class Hoover
                         y = current_coordinates[1]+1
                         new_coordinates = Array.new
                         new_coordinates.insert(0, x).insert(1, y)
+                        new_coordinates = check_valid_move(new_coordinates)
                         @hoover_route << new_coordinates
                         position += 1
                     elsif next_direction == "S"
@@ -60,6 +63,7 @@ class Hoover
                         y = current_coordinates[1]-1
                         new_coordinates = Array.new
                         new_coordinates.insert(0, x).insert(1, y)
+                        new_coordinates = check_valid_move(new_coordinates)
                         @hoover_route << new_coordinates
                         position += 1
                     else
@@ -85,6 +89,24 @@ class Hoover
     def get_dirt_patches
         roomba_manager = RoombaManager.new
         roomba_manager.get_dirt_patches
+    end
+
+    def check_valid_move(new_coordinates)
+        if new_coordinates[0] > 5
+            new_coordinates[0] = new_coordinates[0]-1
+            return new_coordinates
+        elsif new_coordinates[0] < 0
+            new_coordinates[0] = new_coordinates[0]+1
+            return new_coordinates
+        elsif new_coordinates[1] > 5
+            new_coordinates[1] = new_coordinates[1]-1
+            return new_coordinates
+        elsif new_coordinates[1] < 0
+            new_coordinates[1] = new_coordinates[1]+1
+            return new_coordinates
+        else
+            return new_coordinates
+        end
     end
 
 end

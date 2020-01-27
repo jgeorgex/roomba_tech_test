@@ -47,10 +47,36 @@ describe Hoover do
     end
     
     describe '#get_room_dimensions' do
-        it 'gets teh dimensions of the room' do
+        it 'gets the dimensions of the room' do
             hoover = Hoover.new
             expect(hoover.get_room_dimensions).to eq([5,5])
         end
-    end    
+    end
+    
+    describe '#check_valid_move' do
+        it 'checks valid hoover move and makes no change' do
+            hoover = Hoover.new
+            hoover.get_room_dimensions
+            expect(hoover.check_valid_move([1,2])).to eq([1,2])
+        end    
+    
+        it 'checks invalid hoover move and makes adjustment' do
+            hoover = Hoover.new
+            hoover.get_room_dimensions
+            expect(hoover.check_valid_move([6,1])).to eq([5,1])
+        end   
+        
+        it 'checks invalid hoover move and makes adjustment' do
+            hoover = Hoover.new
+            hoover.get_room_dimensions
+            expect(hoover.check_valid_move([3,6])).to eq([3,5])
+        end
+        
+        it 'checks invalid hoover move and makes adjustment' do
+            hoover = Hoover.new
+            hoover.get_room_dimensions
+            expect(hoover.check_valid_move([-1,5])).to eq([0,5])
+        end   
+    end
 
 end
